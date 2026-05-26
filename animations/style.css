@@ -14,7 +14,7 @@ body {
   }
   
   h2 {
-    margin: 40px 0 20px;
+    margin: 40px 0 20px 0px;
   }
   
   .flex-container {
@@ -36,7 +36,7 @@ body {
     border-radius: 8px; 
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgb(7, 7, 7);
+    box-shadow: 0 4px 8px rgb(198, 118, 118);
     transition: background-color 5s;
   }
   
@@ -65,7 +65,7 @@ body {
   }
   
   .bigEntrance {
-    animation: bigEntrance 1.5s ease-out;
+    animation: bigEntrance 8s ease-out;
   }
   
   /* Hover Animations */
@@ -144,8 +144,8 @@ body {
     0% { transform: scale(0.3) rotate(180deg) translateX(-30%) translateY(30%); opacity: 0.2; }
     30% { transform: scale(1.03) rotate(-100deg) translateX(2%) translateY(-2%); opacity: 1; }
     45% { transform: scale(0.98) rotate(100deg) translateX(0) translateY(0); opacity: 1; }
-    60% { transform: scale(1.01) rotate(-1deg) translateX(0) translateY(0); opacity: 1; }
-    75% { transform: scale(0.99) rotate(1deg) translateX(0) translateY(0); opacity: 1; }
+    60% { transform: scale(1.01) rotate(-40deg) translateX(0) translateY(0); opacity: 1; }
+    75% { transform: scale(0.99) rotate(40deg) translateX(0) translateY(0); opacity: 1; }
     90% { transform: scale(1.01) rotate(0) translateX(0) translateY(0); opacity: 1; }
     100% { transform: scale(1) rotate(0) translateX(0) translateY(0); opacity: 1; }
   }
