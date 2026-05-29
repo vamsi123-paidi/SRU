@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background: white; color:black">
+    <button id="bg">Dark</button>
+    <h1 id="heading">this is the html text</h1>
+    <div id="main"></div>
+    <a id="hyperlink" href="https://filpkart.com">click</a>
+    <div id="outer"></div>
+    <h3 id="text" style="display: none">this is the toggle text</h3>
+    <button id="toggle">Show</button>
+    <script>
+      const heading = document.getElementById("heading");
+      heading.textContent = "this is injected in js";
+      const main = document.querySelector("#main");
+      main.innerHTML = "<h1>this is through the js as an heading</h1>";
+
+      const hyperlink = document.getElementById("hyperlink");
+      hyperlink.setAttribute("href", "https://www.amazon.in");
+
+      const outer = document.getElementById("outer");
+      const inner = document.createElement("div");
+      inner.setAttribute("id", "inner");
+      inner.innerHTML = "<h1>this is appended through js</h1>";
+      outer.appendChild(inner);
+
+      const toggle = document.getElementById("toggle");
+      const text = document.getElementById("text");
+      toggle.addEventListener("click", () => {
+        if (text.style.display === "none") {
+          text.style.display = "block";
+        } else {
+          text.style.display = "none";
+        }
+      });
+
+      const bg = document.getElementById("bg");
+      bg.addEventListener("click", () => {
+        if (document.body.style.background === "white") {
+          document.body.style.background = "black";
+          bg.textContent = "light";
+          document.body.style.color = "white"
+        } else {
+          document.body.style.background = "white";
+                    bg.textContent = "dark";
+          document.body.style.color = "dark"
+
+
+        }
+      });
+    </script>
+  </body>
+</html>
