@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="step1">
+      <input type="text" id="username" />
+      <button onclick="next(1)">Next</button>
+    </div>
+    <div id="step2" style="display: none">
+      <input type="tel" id="mobile" />
+      <button onclick="last(2)">Prev</button>
+      <button onclick="next(2)">Next</button>
+    </div>
+    <div id="step3" style="display: none">
+      <input type="email" id="email" />
+      <button onclick="last(3)">prev</button>
+      <button>submit</button>
+    </div>
+
+    <script>
+      const next = function (currentStep) {
+        const step1 = document.getElementById("step1");
+        const step2 = document.getElementById("step2");
+        const step3 = document.getElementById("step3");
+        const username = document.getElementById("username").value;
+        const mobile = document.getElementById("mobile").value;
+        isValid = true;
+        if (currentStep === 1) {
+          if (username.length < 3) {
+            alert("atlest 3 letters needed");
+            isValid = false;
+          }
+        }
+
+        if (currentStep === 2) {
+          if (!/^\d{10}$/.test(mobile)) {
+            alert("enter perfect mobile number");
+            isValid = false;
+          }
+        }
+
+        if (isValid) {
+          if (currentStep === 1) {
+            step1.style.display = "none";
+            step2.style.display = "block";
+          }
+          if (currentStep === 2) {
+            step2.style.display = "none";
+            step3.style.display = "block";
+          }
+        }
+
+      };
+      function last(currentStep) {
+          if (currentStep === 2) {
+            step2.style.display = "none";
+            step1.style.display ="block";
+          }
+          if (currentStep === 3) {
+            step3.style.display = "none";
+            step2.style.display = "block";
+          }
+        }
+    </script>
+  </body>
+</html>
