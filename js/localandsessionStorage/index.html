@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="name" placeholder="enter name..." />
+    <button onclick="addData()">Add name</button>
+    <button onclick="showData()">Show data</button>
+    <div id="output"></div>
+    <button onclick="removeData()">remove data</button>
+    <div id="output"></div>
+
+    <script>
+      const addData = () => {
+        const name = document.getElementById("name").value.trim();
+        if (!name) {
+          alert("enter name");
+        }
+        localStorage.setItem("data", name);
+      };
+
+      const showData = () => {
+        const output = document.getElementById("output");
+        const userData = localStorage.getItem("data");
+        output.innerHTML = `${userData}`;
+      };
+      const removeData = () => {
+        localStorage.removeItem("data");
+      };
+    </script>
+  </body>
+</html>

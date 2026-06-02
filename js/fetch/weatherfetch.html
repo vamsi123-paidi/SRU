@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        background-color: darkorange;
+        color: lightgoldenrodyellow;
+        padding: 50px;
+      }
+      #main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #cityname{
+        padding: 10px;
+        margin-right: 10px;
+        border-radius: 8px;
+      }
+      #btn{
+        padding: 10px;
+        background-color: lightseagreen;
+        color: rgb(10, 251, 146);
+        border-radius: 8px;
+      }
+      #btn:hover{
+        background-color: darkolivegreen;
+      }
+      #output{
+        height: 100%;
+        width: 100%;
+        background-color: skyblue;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <form id="main">
+        <input id="cityname" type="text" placeholder="enter city name.." />
+        <button id="btn" type="submit">Search</button>
+      </form>
+    </div>
+
+    <div id="output">
+
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
