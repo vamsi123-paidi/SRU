@@ -1,0 +1,38 @@
+db.orders.insertMany([
+  {
+    _id: 1,
+    customer: "A",
+    amount: 120,
+    date: ISODate("2023-01-01"),
+    items: ["pen", "book"],
+    category: "stationery",
+    city: "Hyderabad"
+  },
+  {
+    _id: 2,
+    customer: "B",
+    amount: 80,
+    date: ISODate("2023-01-02"),
+    items: ["pencil"],
+    category: "stationery",
+    city: "Bangalore"
+  },
+  {
+    _id: 3,
+    customer: "A",
+    amount: 200,
+    date: ISODate("2023-02-01"),
+    items: ["book", "eraser"],
+    category: "stationery",
+    city: "Hyderabad"
+  },
+  {
+    _id: 4,
+    customer: "C",
+    amount: 300,
+    date: ISODate("2023-02-10"),
+    items: ["bag"],
+    category: "accessories",
+    city: "Chennai"
+  }
+])
