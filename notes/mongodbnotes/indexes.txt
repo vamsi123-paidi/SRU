@@ -1,8 +1,4 @@
-🔥 MongoDB INDEXING — FULL CODE + OUTPUT + EXPLANATION (FIXED)
-
----
-
- 🔹 BASE DATA (CONFIRM)
+🔹 BASE DATA (CONFIRM)
 
 js
 db.orders.find()

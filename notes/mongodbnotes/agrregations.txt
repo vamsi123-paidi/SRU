@@ -1,12 +1,4 @@
-
-
-# 🧠 MongoDB Aggregation Framework — FULL GUIDE
-
-(Full Code + Output + Deep Explanation)
-
----
-
- 🔹 STEP 0: DATABASE & COLLECTION SETUP (FULL)
+🔹 STEP 0: DATABASE & COLLECTION SETUP (FULL)
 
 js
 use shopDB
